@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>List of {{ item_type_template }}</h1>
+<ul>
+    {% for item in items_template %}
+    <li><a href ="/products/{{ item_type_template }}/{{ loop.index - 1 }}">{{ item['name'] }} </a></li>
+    {% endfor %}
+</ul>
+{%  endblock %}
